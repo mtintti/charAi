@@ -1,0 +1,35 @@
+
+
+.divider {
+  border-top: 1px solid #bbb;
+  width: 240px;
+  padding: 10px;
+}
+
+.profilesect {
+  flex-direction: row;
+  position: absolute;
+  bottom: 10px;
+}
+
+.profilesecCont {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.usernamehandler{
+  flex-direction: column;
+}
+
+.handler {
+  font-weight: 500;
+  font-size: medium;
+  color: rgb(166, 166, 166);
+}
+
+.username {
+  font-weight: 500;
+  font-size: medium;
+  color: rgb(166, 166, 166);
+}

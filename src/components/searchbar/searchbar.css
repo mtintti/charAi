@@ -1,0 +1,37 @@
+
+
+.searchbarcont {
+  font-size: large;
+  font-weight: 500;
+  border-radius: 20px;
+  background-color: rgb(232, 232, 232);
+}
+
+.searchbar {
+  align-items: center;
+  height: 40px;
+  margin-left: 20px;
+  display: flex;
+}
+
+.searchtext {
+  margin-left: 10px;
+  color: rgb(175, 175, 175);
+
+
+}
+
+.searchtext input {
+    background-color: transparent;
+  border: none;
+  outline: none;
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.searchimg {
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;
+}

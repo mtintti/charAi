@@ -1,0 +1,117 @@
+/*#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+.main {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  flex-direction: row;
+  background-color: black;
+  font-family: "Roboto", sans-serif;
+}
+
+.sidebar {
+  width: 270px;
+  padding: 2rem;
+  background-color: rgb(255, 255, 255);
+
+}
+
+.nametext {
+  font-weight: 800;
+  font-size: 1.7rem;
+}
+
+.nameheader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.sidebar-list {
+  display: flex;
+  flex-direction: column;
+  /*padding: 5rem;*/
+  /*justify-content: center;
+  align-items: center;*/
+}
+
+.closeimg {
+  height: 1.5rem;
+  width: auto;
+  margin-left: 150px;
+}
+
+
+
+
+.spacer {
+  padding-top: 30px;
+  padding: 5px;
+}
+
+
+
+.divider {
+  border-top: 1px solid #bbb;
+  width: 240px;
+  padding: 10px;
+}
+
+.profilesect {
+  flex-direction: row;
+  position: absolute;
+  bottom: 10px;
+}
+
+.profilesecCont {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.usernamehandler{
+  flex-direction: column;
+}
+
+.handler {
+  font-weight: 500;
+  font-size: medium;
+  color: rgb(166, 166, 166);
+}
+
+.username {
+  font-weight: 500;
+  font-size: medium;
+  color: rgb(166, 166, 166);
+}
+
+.mainApp {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.closeimg:hover {
+  border-radius: 25px;
+  height: 25px;
+  width: 25px;
+  background-color: rgb(232, 232, 232);
+}
+
+
+
+
+@media (max-width: 450px) {
+
+}
+
