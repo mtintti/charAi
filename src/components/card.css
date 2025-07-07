@@ -1,0 +1,72 @@
+
+
+.card {
+  /*margin: 10px; original
+  border-radius: 10px;
+  padding: 10px;
+  width: 500px;
+  background-color: aliceblue;*/
+
+  border-radius: 10px;
+  padding: 10px;
+  /*width: 100%;*/             /* ✅ take full width of grid column */
+  box-sizing: border-box;  /* ✅ padding won't overflow width */
+  background-color: aliceblue;
+  height: 360px;
+  /*height: fit-content;*/
+
+  display:inline-block;
+  cursor: pointer;
+  transition: ease-in-out;
+  transition-duration: 300ms;
+  width: 240px;
+  margin-right: 20px;
+  overflow-x: hidden; 
+  /*word-wrap: break-word;
+  white-space: normal; */
+}
+
+
+@media (max-width:600px) {
+  .card{
+    margin: 5px;
+  }
+
+
+}
+
+
+.cardheader {
+  display: flex;
+  align-items: center;
+  padding-top: 15px;
+  padding-left: 10px;
+  flex-direction: row;
+}
+
+.profile-card {
+  /*height: 2.5rem;*/
+  height: 3rem;
+  width: 3rem;
+  border-radius: 25px;
+  background-color: rgb(158, 196, 230);
+  margin-right: 5px;
+}
+
+.name {
+  font-size: larger;
+  font-weight: 500;
+}
+
+.header-text {
+  font-size: large;
+  font-weight: 500;
+}
+
+.cards-text {
+  font-size: large;
+  font-weight: 400;
+  padding: 0 10px;
+  box-sizing: border-box;
+  
+}

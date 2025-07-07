@@ -79,6 +79,10 @@
   transition: background-color 0.2s ease;
 }
 
+.settings {
+  
+}
+
 /* width: 3px;
   height: 10px;
   align-items: center;
@@ -91,8 +95,49 @@
   height: 20px;
   visibility: hidden;
   justify-content: center;
+  border: none;
+  outline: none;
 }
 
+.settings-button:focus {
+  outline-style: none;
+  border: none;
+  outline: none;
+}
+
+.sidepopup{
+  left: 40px;
+  background-color: rgb(243, 243, 243);
+  border-radius: 15px;
+  width: 150px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidepopupcont {
+  flex-direction: row;
+}
+
+.firstsetting{
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.removebutton{
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.removebutton:hover{
+  border-radius: 10px;
+  background-color: rgba(255, 40, 40, 0.566);
+}
+
+.firstsetting:hover{
+  border-radius: 10px;
+  background-color: rgb(214, 214, 214);
+}
 
 .invichat:hover {
   border-radius: 15px;
