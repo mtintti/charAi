@@ -28,16 +28,15 @@
 }
 
 .divid {
-  max-width: 2100px;
+  width: 100vw;
   position: relative;
 }
 
-@media (max-width:600px) {
+@media (max-width:940px) {
   .divid {
-    max-width: 500px;
+    max-width: 200vw;
     position: relative;
   }
-
 }
 
 .mainul {
@@ -45,5 +44,6 @@
   list-style: none;
   overflow-x: scroll;
   padding: 20px 0;
+  
 
 }

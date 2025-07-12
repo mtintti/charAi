@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import settingimg from '../../assets/dot-menu-more-2-svgrepo-com.svg'
 import './sidebarchats.css'
+import { Link } from 'react-router-dom';
 
 
 const SidebarChats = () => {
@@ -37,6 +38,7 @@ const SidebarChats = () => {
         </div>
         <div className='sbChats'>
           <div className='sbchatsDate'>yesterday</div>
+          <Link to="/chat">
           <div className='invichat'>
             <p className='profileA'></p>
             <p className='inviname'>Astarion</p>
@@ -46,6 +48,7 @@ const SidebarChats = () => {
               </button>
             </div>
           </div>
+          </Link>
 
           <div className='invichat'>
             <p className='profilec'></p>

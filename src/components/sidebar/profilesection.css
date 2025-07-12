@@ -2,8 +2,9 @@
 
 .divider {
   border-top: 1px solid #bbb;
-  width: 240px;
+  width: 190px;
   padding: 10px;
+  padding-top: 5px;
 }
 
 .profilesect {
@@ -24,12 +25,12 @@
 
 .handler {
   font-weight: 500;
-  font-size: medium;
+  font-size:small;
   color: rgb(166, 166, 166);
 }
 
 .username {
   font-weight: 500;
-  font-size: medium;
+  font-size:small;
   color: rgb(166, 166, 166);
 }

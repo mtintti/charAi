@@ -6,30 +6,37 @@
   padding: 10px;
   width: 500px;
   background-color: aliceblue;*/
-
+  
   border-radius: 10px;
   padding: 10px;
   /*width: 100%;*/             /* ✅ take full width of grid column */
   box-sizing: border-box;  /* ✅ padding won't overflow width */
-  background-color: aliceblue;
-  height: 360px;
+  /*background-color: aliceblue;*/
+  background-color: rgb(255, 255, 255);
+  height: 150px;
   /*height: fit-content;*/
 
-  display:inline-block;
+  display:flex;
   cursor: pointer;
   transition: ease-in-out;
   transition-duration: 300ms;
-  width: 240px;
+  width: 340px;
   margin-right: 20px;
   overflow-x: hidden; 
   /*word-wrap: break-word;
-  white-space: normal; */
+  white-space: normal;
+  display:inline-block; */
 }
 
+.cardrow {
+  flex-direction: row;
+}
 
 @media (max-width:600px) {
   .card{
     margin: 5px;
+    height: 190px;
+    width: 340px;
   }
 
 
@@ -38,33 +45,32 @@
 
 .cardheader {
   display: flex;
-  align-items: center;
-  padding-top: 15px;
-  padding-left: 10px;
-  flex-direction: row;
 }
 
+
 .profile-card {
-  /*height: 2.5rem;*/
+  /*height: 2.5rem;   flex-direction: row;*/
   height: 3rem;
   width: 3rem;
   border-radius: 25px;
   background-color: rgb(158, 196, 230);
   margin-right: 5px;
+  
 }
 
 .name {
-  font-size: larger;
-  font-weight: 500;
+  font-size: normal;
+  font-weight: 600;
 }
 
 .header-text {
-  font-size: large;
-  font-weight: 500;
+  font-size: normal;
+  font-weight: 400;
+  margin-top: 0px;
 }
 
 .cards-text {
-  font-size: large;
+  font-size: normal;
   font-weight: 400;
   padding: 0 10px;
   box-sizing: border-box;

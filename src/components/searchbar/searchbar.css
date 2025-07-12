@@ -1,24 +1,22 @@
 
 
 .searchbarcont {
-  font-size: large;
+  font-size: normal;
   font-weight: 500;
-  border-radius: 20px;
+  border-radius: 10px;
   background-color: rgb(232, 232, 232);
 }
 
 .searchbar {
   align-items: center;
   height: 40px;
+  width: 100px;
   margin-left: 20px;
   display: flex;
 }
 
 .searchtext {
-  margin-left: 10px;
   color: rgb(175, 175, 175);
-
-
 }
 
 .searchtext input {

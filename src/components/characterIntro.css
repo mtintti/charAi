@@ -1,0 +1,360 @@
+
+.charmaincont{
+    /*background-color: rgb(241, 241, 241);*/
+    /*    background-color: rgb(232, 232, 232);    
+*/    
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    mask-image: radial-gradient(circle, black, black 65%, transparent 85%);
+}
+
+
+
+
+@media (max-width:800px) {
+    .charmaincont{
+    width: 50vh;
+    flex-direction: column;
+    }
+    .parkcentral{
+    width: 60vw;
+    height: 60vh;
+    }
+
+    .charmaincont{
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    }
+
+}
+
+.charscreens{
+    /*justify-items: center;*/
+    
+    mask-image: radial-gradient(line, black, black 65%, transparent 85%);
+}
+
+.cutout {
+    width: 50px;
+    height: 40px;
+}
+
+.parkcentral{
+    height: 50vh;
+
+  left: 50px;
+  text-decoration: none;
+  background: #fff;
+  border-radius: 8px;
+  transform: skewY(5deg);
+  transition: 0.7s;
+}
+
+
+.parkcentral:hover:before,
+.parkcentral:hover{
+    transform: skewX(0deg);
+    transition: 1.5s;
+}
+
+
+.one{
+
+    object-fit: none;
+    object-position: -20px -40px;
+}
+
+.charselected{
+    display: flex;
+    height: 3rem;
+    width: 3rem;
+    position: absolute;
+    left: 10px;
+    z-index: 10;
+}
+
+.numberbuttons{
+    display: flex;
+    justify-content: center;
+    
+    gap: 5px;
+}
+
+.button{
+    border-radius: 10px;
+    height: 2rem;
+    width: 3rem;
+    margin-right: 10px;
+    text-align: center;
+}
+
+
+
+.container
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  padding: 40px 0;
+}
+
+.container .box
+{
+  position: relative;
+  width: 320px;
+  max-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 30px;
+  transition: 0.5s;
+}
+
+.container .box::before
+{
+  content:' ';
+  position: absolute;
+  top: 0;
+  left: 50px;
+  width: 50%;
+  height: 100%;
+  text-decoration: none;
+  background: #fff;
+  border-radius: 8px;
+  transform: skewX(15deg);
+  transition: 0.5s;
+}
+
+
+.container .box::after
+{
+  content:'';
+  position: absolute;
+  top: 0;
+  left: 50px;
+  width: 50%;
+  height: 100%;
+  background: #fff;
+  border-radius: 8px;
+  transform: skewX(15deg);
+  transition: 1.5s;
+  /*filter: blur(30px);*/
+}
+
+.container .box:hover:before,
+.container .box:hover:after
+{
+  transform: skewX(0deg);
+  left: 20px;
+  width: calc(130vh - 90px);
+  /*affects the blur on the green to get wide after not hovering over the content, this is a bug. this same width calc part also does the dead space movement that we want*/
+  
+}
+
+
+
+.container .bo:hover:after {
+  flex-direction: column;
+  
+} 
+
+.container .box:hover .content> .text:not(:hover) {
+  color: red;
+  visibility: visible;
+  flex-direction: column;
+} 
+.text {
+  visibility: hidden;
+}
+/*
+
+.box:hover~.box::before{
+  transition: 2s;
+}
+.box:hover~.box{
+  transition: 2s;
+  left: 120vw;
+  opacity: 0;
+}
+
+.box:hover~.box::after{
+  transition: 2s;
+  
+}*/
+
+.container:hover .box{
+  opacity: 0;
+  transition: 1s;
+}
+
+
+
+.container .box:hover {
+  opacity: 1;
+  transition: 1s;
+}
+
+.box:hover~#box {
+  background: #111;
+}
+
+.container .box:nth-child(1):before,
+.container .box:nth-child(1):after
+{
+  /*background: linear-gradient(315deg, #ffbc00, #ff0058)*/
+  background: linear-gradient(315deg, #41965e, #5ea075)
+}
+
+
+.container .box:nth-child(2):before,
+.container .box:nth-child(2):after
+{
+  background: linear-gradient(315deg, #03a9f4, #ff0058)
+}
+
+.container .box:nth-child(3):before,
+.container .box:nth-child(3):after
+{
+  background: linear-gradient(315deg, #4dff03, #00d0ff)
+}
+
+.container .box span
+{
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.container .box span::before
+{
+  content:'';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  opacity: 0;
+  transition: 0.1s;  
+  animation: animate 2s ease-in-out infinite;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08)
+}
+
+.container .box:hover span::before
+{
+  top: -50px;
+  left: 50px;
+  width: 100px;
+  height: 100px;
+  opacity: 1;
+  
+}
+/*box top*/
+
+.container .box span::after
+{
+  content:'';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  opacity: 0;
+  transition: 0.5s;
+  animation: animate 2s ease-in-out infinite;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  animation-delay: -1s;
+  
+}
+/*box flouting under ^*/
+
+.container .box:hover span:after
+{
+  bottom: -50px;
+  right: 50px;
+  width: 100px;
+  height: 100px;
+  opacity: 1;
+}
+
+@keyframes animate
+{
+  0%, 100%
+  {
+    transform: translateY(10px);
+  }
+  
+  50%
+  {
+    transform: translate(-10px);
+  }
+}
+
+.container .box .content
+{
+  position: relative;
+  left: 0;
+  padding: 20px 40px;
+ 
+  border-radius: 8px;
+  z-index: 1;
+  transform: 0.5s;
+  color: #fff;
+}
+
+/*where the picture goes after hover*/
+.container .box:hover .content
+{
+  left: -25px;
+  padding: 60px 40px;
+  transition: 0.7s;
+}
+
+
+.container .box .content h2
+{
+  font-size: 2em;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.container .box .content p
+{
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  line-height: 1.4em;
+}
+
+.container .box .content a
+{
+  display: inline-block;
+  font-size: 1.1em;
+  color: #111;
+  background: #fff;
+  padding: 10px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 700;
+  margin-top: 5px;
+}
+
+.container .box .content a:hover
+{
+  background: #ffcf4d;
+  border: 1px solid rgba(255, 0, 88, 0.4);
+  box-shadow: 0 1px 15px rgba(1, 1, 1, 0.2);
+}
+

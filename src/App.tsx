@@ -15,12 +15,20 @@ import Card from './components/card'
 import { useDragControls, motion, useScroll, Motion } from 'motion-v'
 import ScrollLinked from './components/test'
 import Mainchats from './components/mainchats'
+import CharacterIntro from './components/characterIntro'
+import { BrowserRouter, Route, Router, Routes } from 'react-router-dom'
+import Sidebar from './components/sidebar'
+import Profile from './components/profile'
+import Frontpage from './components/Frontpage'
+import Chat from './components/chat'
 
 
 function App() {
   const [data, setdata] = useState([]);
-  const [open, setasopen] = useState(false);
+
   const containerReference = useRef<HTMLDivElement>(null);
+
+
 
   /* <script setup>
 import { useDragControls, motion } from 'motion-v'
@@ -96,17 +104,20 @@ const controls = useDragControls()
 
   const controls = useDragControls()
 
-  const handlesidebarOpen = () => {
-    console.log("sidebar opened!")
-    setasopen(true);
-    console.log("bar is ??: " + open)
-  }
 
-  const handlesidebarClose = () => {
-    console.log("sidebar closed!")
-    setasopen(false);
-    console.log("bar is ??: " + open)
-  }
+
+
+  /*useEffect(() => {
+    if (!open) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [open]);*/
 
 
 
@@ -120,139 +131,12 @@ const controls = useDragControls()
   return (
     <>
       <div className='main maindivi'>
-        {!open ? (<div className='sidebar'>
-          <div className='sidebar-list'>
-            <div className='nameheader'>
-              <p className='nametext'>charAi</p>
-              <div className='closesidebar'>
-                <div>
-                  <img className='closeimg' onClick={handlesidebarOpen} src={closeside}></img>
-                </div>
-              </div>
-            </div>
-            <Discoverybutton />
-
-            {/*<div className='Discovery'>
-              <button className='discoverbar'>
-                <img className='navimg' src={navimg}></img>
-                <div className='discovertext'>
-                  <p>Discover</p>
-                </div>
-              </button>
-
-            </div>
-            */}
-
-            {/* search */}
-            <div className='spacer'>
-              {/*<div className='searchbarcont'>
-                <div className='searchbar'>
-                  <img className='searchimg' src={searchimg}></img>
-                  <div className='searchtext'>
-                    <form>Search</form>
-                  </div>
-                </div>
-              </div>*/}
-
-              <Searchbar />
-            </div>
-
-
-            {/*<div className='sidebarChats'>
-              <div className='sbChats'>
-                <div className='sbchatsDate'>today</div>
-                <div className='invichat'>
-                  <p className='profile'></p>
-                  <p className='inviname'>vampire hunter</p>
-                  <div className='settings-buttoncont'>
-                    <button className='settings-button'>
-                      <img className="settingimg" src={settingimg}></img>
-                    </button>
-                  </div>
-                </div>
-                <div className='sbChats'>
-                  <div className='sbchatsDate'>yesterday</div>
-                  <div className='invichat'>
-                    <p className='profileA'></p>
-                    <p className='inviname'>Astarion</p>
-                    <div className='settings-buttoncont'>
-                      <button className='settings-button'>
-                        <img className="settingimg" src={settingimg}></img>
-                      </button>
-                    </div>
-                  </div>
-
-                  <div className='invichat'>
-                    <p className='profilec'></p>
-                    <p className='inviname'>cutie</p>
-                    <div className='settings-buttoncont'>
-                      <button className='settings-button'>
-                        <img className="settingimg" src={settingimg}></img>
-                      </button>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-            </div>*/}
-            <SidebarChats />
-          </div>
-
-          {/* profilesection *
-          <div className='profilesect'>
-            <div className='divider'></div>
-            <div className='profilesecCont'>
-              <div className='profile'></div>
-              <div className='usernamehandler'>
-                <div className='handler'>mtintti</div>
-                <div className='username'>@manicmainiac233</div>
-              </div>
-            </div>
-          </div>*/}
-          <Profilesection />
-
-        </div>) : (<div className='sidebarclosed'>
-          <div className='nameheader'>
-            <p className='nametext'> </p>
-            <div className='closesidebarpressed'>
-              <div>
-                <img className='closeimgpressed' onClick={handlesidebarClose} src={closeside}></img>
-              </div>
-            </div>
-          </div>
-        </div>)}
-        <div className='mainApp'>
-          <div className='containermain'>
-            <div className='welcomecol'>
-              <p className='welcometext'>Welcome back</p>
-              <div className='welcomerow'>
-                <img src={emoji} className='emoji'></img>
-                <p className='welcomeusername'>mtintti</p>
-                </div>
-            </div>
-            <div className='headername'> suggested chats</div>
-
-            <Mainchats />
-
-            {/*<div className='mainchats'>
-                {cardtexts.map((item) => (/*<Card key={item.id}
-                  name={item.name} header={item.header} text={item.text} />
-                  <Card key={item.id} name={item.name} header={item.header} text={item.text} />))}
-              </div>*/}
-            {/*<div id='items-container' className='sroll' ref={containerReference}>*/ /* id='items-container' ref={containerReference} */}
-            {/*<div className="mainchats" > 
-                {cardtexts.map((item) => (
-                  <Card
-                    key={item.id}
-                    name={item.name}
-                    header={item.header}
-                    text={item.text}
-                  />
-                ))}
-              </div>*/}
-
-          </div>
-        </div>
+        <Sidebar />
+        <Routes>
+          <Route path='/Profile' element={<Profile />} />
+          <Route path='/' element={<Frontpage/>} />
+          <Route path='chat' element={<Chat/>} />
+        </Routes>
       </div>
     </>
   )

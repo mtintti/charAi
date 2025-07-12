@@ -17,7 +17,7 @@ const cardtexts = [
         id: 1,
         name: "Astarion",
         header: "Spicy and sweet",
-        text: "He is charming rogue and a ass. he is a vamp and he wants to have a treat from you. Can you be an frend this traumaticed but strong cutie needs?",
+        text: "He is charming rogue and a ass. he is a vamp and he wants to have a treat from you. Can you friend strong cutie needs?",
     },
     {
         id: 2,
